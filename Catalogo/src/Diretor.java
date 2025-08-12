@@ -1,4 +1,4 @@
-package com.catalogo.imdb;
+
 
 public class Diretor extends Pessoa{
     private int credencialDiretor;

@@ -1,54 +1,36 @@
-import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Ator {
-    private String nome;
-    private LocalDate dataNascimento;
-    private String biografia;
-    private List<Filme> filmesParticipados;
+public class Ator extends Pessoa{
+    private int credencialDRT;
+    private List<Filme> filmes;
 
-    public Ator(String nome, LocalDate dataNascimento, String biografia, List<Filme> filmesParticipados) {
-        this.nome = nome;
-        this.dataNascimento = dataNascimento;
-        this.biografia = biografia;
-        this.filmesParticipados = filmesParticipados;
+    public Ator(String nome, String dataNascimento, String genero, int credencialDRT) {
+        super(nome, dataNascimento, genero);
+        this.credencialDRT = credencialDRT;
+        this.filmes = new ArrayList<>();
     }
 
-    public String getNome() {
-        return nome;
+    public List<Filme> getFilmes() {
+        return filmes;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setFilmes(List<Filme> filmes) {
+        this.filmes = filmes;
     }
 
-    public LocalDate getDataNascimento() {
-        return dataNascimento;
+    public int getCredencialDRT() {
+        return credencialDRT;
     }
 
-    public void setDataNascimento(LocalDate dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setCredencialDRT(int credencialDRT) {
+        this.credencialDRT = credencialDRT;
     }
 
-    public String getBiografia() {
-        return biografia;
-    }
-
-    public void setBiografia(String biografia) {
-        this.biografia = biografia;
-    }
-
-    public List<Filme> getFilmesParticipados() {
-        return filmesParticipados;
-    }
-
-    public void setFilmesParticipados(List<Filme> filmesParticipados) {
-        this.filmesParticipados = filmesParticipados;
-    }
-
-    public void adicionarFilme(Filme filme) {
-        if (filmesParticipados != null) {
-            filmesParticipados.add(filme);
-        }
+    public String mostrarInfo() {
+        return  "Nome: " + this.getNome() + '\n' +
+                "Data de Nascimento: " + this.getDataNascimento() + '\n' +
+                "Gênero: " + this.getGenero() + '\n' +
+                "CredencialDRT" + this.credencialDRT + '\n';
     }
 }
