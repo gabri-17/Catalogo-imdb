@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Aplicacao {
     public static void main(String[] args) {
         // Instância 1
@@ -100,7 +102,8 @@ public class Aplicacao {
         Diretor diretor20 = new Diretor("Renato", "07/12/1982", "masculino", 999);
         Filme filme20 = new Filme("A Estrada para o Desconhecido", "04/07/2021", 720000, "Ficção científica e aventura");
         Catalogo catalogo = new Catalogo();
-        catalogo
+        catalogo.exibirMenu();
+       // List
 
     }
 }

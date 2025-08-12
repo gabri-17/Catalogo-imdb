@@ -1,4 +1,3 @@
-package com.catalogo.imdb;
 
 public class Pessoa {
     private String nome;
